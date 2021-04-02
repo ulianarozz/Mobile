@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+		Title="Detail"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MovieApp.DetailPage">
+    <RelativeLayout>
+        <ScrollView BackgroundColor="#081c24">
+            <StackLayout>
+                <Image Source="{Binding Backdrop_path, StringFormat='https://image.tmdb.org/t/p/w500/{0}'}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=1}" ></Image>
+
+                <Label Text="{Binding Title}" FontSize="34"  TextColor="#01d277" XAlign="Start" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,ElementName=Image, Property=Height, Factor=1,Constant=20}"/>
+                <Label Text="{Binding Vote_average}" FontSize="30" TextColor="White" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"/>
+                <Label TextColor="#f4f4f4" Text="{Binding Overview}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5, Constant=-120}"></Label>
+
+            </StackLayout>
+        </ScrollView>
+        </RelativeLayout>
+</ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieApp.MovieList" >
+    <ListView x:Name="MovieListView" IsVisible="True" ItemSelected="MovieListView_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" Padding="10">
+                       
+                        <Grid>
+                            <StackLayout>
+                                <Label Text="{Binding Title}" FontSize="Large"/>
+                                <Label Text="{Binding Overview}" FontSize="Subtitle"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
